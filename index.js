@@ -2,15 +2,16 @@
 
 require("dotenv").config();
 
-import { isUrl } from "./src/isUrl";
-
+const isUrl = require("./src/isUrl");
+const postToServer = require("./src/postToServer");
 const Discord = require("discord.js");
+
 const client = new Discord.Client();
 
 client.on("message", msg => {
   msg.content.split(" ").forEach(item => {
     if (isUrl(item)) {
-      console.log(`URL: ${item}`);
+      postToServer(item, msg.author.username);
     }
   });
 });

@@ -1,4 +1,6 @@
-export const isUrl = url => {
+"use strict";
+
+module.exports = url => {
   const typeOfUrl = typeof url;
 
   if (typeOfUrl !== "string") {
