@@ -9,7 +9,6 @@ const client = new Discord.Client();
 
 client.on("message", msg => {
   msg.content.split(" ").forEach(item => {
-    console.log(item);
     if (isUrl(item)) {
       console.log(`URL: ${item}`);
     }
