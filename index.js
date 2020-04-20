@@ -7,7 +7,7 @@ const postToServer = require("./src/postToServer");
 const Discord = require("discord.js");
 const CronJob = require('cron').CronJob;
 
-const SHOW_N_TELL_CHANNEL = 692926834525995108;
+const SHOW_N_TELL_CHANNEL = '692926834525995108';
 const client = new Discord.Client();
 
 client.on("message", (msg) => {
