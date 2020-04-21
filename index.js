@@ -23,7 +23,7 @@ client.on("message", (msg) => {
 
 client.login(process.env.TOKEN);
 
-const notifyUsersForShowAndTell = new CronJob('55 17 * * 1-5', () => {
+const notifyUsersForShowAndTell = new CronJob('45 17 * * 1-5', () => {
   console.log(new Date());
   client.channels.fetch(SHOW_N_TELL_CHANNEL).then(channel => channel.send(
     "@everyone, Get ready for Show and Tell!"
