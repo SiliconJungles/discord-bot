@@ -35,7 +35,7 @@ const notifyUsersForShowAndTell = new CronJob('45 17 * * 1-5', () => {
     } else {
       console.log(`Starting show and tell: ${today}`)
       client.channels.fetch(SHOW_N_TELL_CHANNEL).then(channel => channel.send(
-        "@SiliconDeveloper, Get ready for Show and Tell!"
+        "<@&510003563636719626>, Get ready for Show and Tell!"
       ));
     }
   }).catch((error) => {
